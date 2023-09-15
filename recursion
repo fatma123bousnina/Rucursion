@@ -1,0 +1,27 @@
+def is_palindrome(word):
+    # Remove spaces and convert to lowercase for case-insensitive comparison
+    word = word.replace(" ", "").lower()
+
+    # Base cases: an empty word or a word with a single character is a palindrome
+    if len(word) <= 1:
+        return True
+
+    # Compare characters at the ends of the word
+    if word[0] == word[-1]:
+        # Recursively check the rest of the word
+        return is_palindrome(word[1:-1])
+    else:
+        return False
+
+# Example usage:
+word = "kayak"
+result = is_palindrome(word)
+if result:
+    print(f"{word} is a palindrome.")
+else:
+    print(f"{word}  characters at the ends of the word and continues checking the rest of the word until a difference is found or the word is determined to be a palindrome.
+
+
+
+
+
